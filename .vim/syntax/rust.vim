@@ -1,43 +1,74 @@
 " Vim syntax file
 " Language:     Rust
 " Maintainer:   Patrick Walton <pcwalton@mozilla.com>
-" Last Change:  2010 Oct 13
+" Maintainer:   Ben Blum <bblum@mozilla.com>
+" Last Change:  2012 Jul 06
 
-" Quit when a syntax file was already loaded
-if !exists("main_syntax")
-  if version < 600
-    syntax clear
-  elseif exists("b:current_syntax")
-    finish
-  endif
-  " we define it here so that included files can test for it
-  let main_syntax='rust'
+if version < 600
+  syntax clear
+elseif exists("b:current_syntax")
+  finish
 endif
 
-syn keyword   rustKeyword     alt as assert be bind break
-syn keyword   rustKeyword     check claim cont const copy do else export fail
-syn keyword   rustKeyword     for if impl import in inline lambda let log
-syn keyword   rustKeyword     loop mod mut mutable native note of prove pure
-syn keyword   rustKeyword     ret self syntax to unchecked
-syn keyword   rustKeyword     unsafe use while with
+syn keyword   rustAssert      assert
+syn match     rustAssert      "assert\(\w\)*"
+syn keyword   rustKeyword     alt as break
+syn keyword   rustKeyword     check claim cont const copy do drop else export extern fail
+syn keyword   rustKeyword     for if impl import in let log
+syn keyword   rustKeyword     loop mod mut new of pure
+syn keyword   rustKeyword     ret self to unchecked
+syn match     rustKeyword     "unsafe" " Allows also matching unsafe::foo()
+syn keyword   rustKeyword     use while with
 " FIXME: Scoped impl's name is also fallen in this category
-syn keyword   rustKeyword     mod iface resource class enum type nextgroup=rustIdentifier skipwhite
+syn keyword   rustKeyword     mod iface trait class enum type nextgroup=rustIdentifier skipwhite
 syn keyword   rustKeyword     fn nextgroup=rustFuncName skipwhite
 
 syn match     rustIdentifier  "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
 syn match     rustFuncName    "\%([^[:cntrl:][:space:][:punct:][:digit:]]\|_\)\%([^[:cntrl:][:punct:][:space:]]\|_\)*" display contained
 
 " Reserved words
-syn keyword   rustKeyword     m32 m64 m128 f80 f16 f128 class trait
+syn keyword   rustKeyword     m32 m64 m128 f80 f16 f128
 
 syn keyword   rustType        any int uint float char bool u8 u16 u32 u64 f32
 syn keyword   rustType        f64 i8 i16 i32 i64 str
+syn keyword   rustType        option either
+
+" Types from libc
+syn keyword   rustType        c_float c_double c_void FILE fpos_t
+syn keyword   rustType        DIR dirent
+syn keyword   rustType        c_char c_schar c_uchar
+syn keyword   rustType        c_short c_ushort c_int c_uint c_long c_ulong
+syn keyword   rustType        size_t ptrdiff_t clock_t time_t
+syn keyword   rustType        c_longlong c_ulonglong intptr_t uintptr_t
+syn keyword   rustType        off_t dev_t ino_t pid_t mode_t ssize_t
 
 syn keyword   rustBoolean     true false
 
-syn match     rustItemPath    "\(\w\|::\)\+"
+syn keyword   rustConstant    some none       " option
+syn keyword   rustConstant    left right      " either
+syn keyword   rustConstant    ok err          " result
+syn keyword   rustConstant    success failure " task
+syn keyword   rustConstant    cons nil        " list
+" syn keyword   rustConstant    empty node      " tree
 
-syn region	  rustString      start=+L\="+ skip=+\\\\\|\\"+ end=+"+
+" Constants from libc
+syn keyword   rustConstant    EXIT_FAILURE EXIT_SUCCESS RAND_MAX
+syn keyword   rustConstant    EOF SEEK_SET SEEK_CUR SEEK_END _IOFBF _IONBF
+syn keyword   rustConstant    _IOLBF BUFSIZ FOPEN_MAX FILENAME_MAX L_tmpnam
+syn keyword   rustConstant    TMP_MAX O_RDONLY O_WRONLY O_RDWR O_APPEND O_CREAT
+syn keyword   rustConstant    O_EXCL O_TRUNC S_IFIFO S_IFCHR S_IFBLK S_IFDIR
+syn keyword   rustConstant    S_IFREG S_IFMT S_IEXEC S_IWRITE S_IREAD S_IRWXU
+syn keyword   rustConstant    S_IXUSR S_IWUSR S_IRUSR F_OK R_OK W_OK X_OK
+syn keyword   rustConstant    STDIN_FILENO STDOUT_FILENO STDERR_FILENO
+
+" If foo::bar changes to foo.bar, change this ("::" to "\.").
+" If foo::bar changes to Foo::bar, change this (first "\w" to "\u").
+syn match     rustModPath     "\w\(\w\)*::[^<]"he=e-3,me=e-3
+syn match     rustModPathSep  "::"
+
+syn region    rustString      start=+L\="+ skip=+\\\\\|\\"+ end=+"+ contains=rustTodo
+
+syn region    rustAttribute   start="#\[" end="\]" contains=rustString
 
 " Number literals
 syn match     rustNumber      display "\<[0-9][0-9_]*\>"
@@ -73,14 +104,21 @@ hi def link rustString        String
 hi def link rustCharacter     Character
 hi def link rustNumber        Number
 hi def link rustBoolean       Boolean
+hi def link rustConstant      Constant
 hi def link rustFloat         Float
+hi def link rustAssert        Keyword
 hi def link rustKeyword       Keyword
 hi def link rustIdentifier    Identifier
+hi def link rustModPath       Include
 hi def link rustFuncName      Function
 hi def link rustComment       Comment
 hi def link rustMacro         Macro
 hi def link rustType          Type
 hi def link rustTodo          Todo
+hi def link rustAttribute     PreProc
+" Other Suggestions:
+" hi def link rustModPathSep    Conceal
+" hi rustAssert ctermfg=yellow
 
 syn sync minlines=200
 syn sync maxlines=500
