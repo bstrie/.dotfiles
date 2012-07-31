@@ -112,3 +112,9 @@ set scrolljump=5
 
 "Cause screen to scroll when within three lines of the edge
 set scrolloff=3
+
+"Enable persistent undo
+set undofile                "Save undo history when a file is closed
+set undodir=$HOME/.vim/undo "Where to save undo histories
+set undolevels=1000         "How many undos to save
+set undoreload=10000        "Number of lines to save for undo
