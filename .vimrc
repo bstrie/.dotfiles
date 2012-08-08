@@ -7,12 +7,7 @@ call pathogen#infect()
 "Turn on syntax highlighting
 syntax on
 
-"Enable the solarized colorscheme
-"set background=light  "Alternative colorscheme
-"set background=dark
-"colorscheme solarized
-
-"The torte colorscheme will suffice until I finish tweaking solarized
+"Love this color scheme
 colorscheme torte
 
 "Turn on line numbers
@@ -84,12 +79,12 @@ command W w
 command Q q
 
 "Tell vim to remember certain things when we exit
-" '10  :  marks will be remembered for up to 10 previously edited files
-" "100 :  will save up to 100 lines for each register
-" :20  :  up to 20 lines of command-line history will be remembered
-" %    :  saves and restores the buffer list
-" n... :  where to save the viminfo files
-set viminfo='10,\"100,:20,%,n~/.viminfo
+" '10  marks will be remembered for up to 10 previously edited files
+" "100 will save up to 100 lines for each register
+" :20  up to 20 lines of command-line history will be remembered
+" %    saves and restores the buffer list
+" n... where to save the viminfo files
+set viminfo='10,\"100,:20,%,n~/.vim/viminfo
 
 "Function to save the cursor position of the previously opened file
 function! ResCur()
@@ -98,7 +93,6 @@ function! ResCur()
     return 1
   endif
 endfunction
-
 augroup resCur
   autocmd!
   autocmd BufWinEnter * call ResCur()
@@ -115,6 +109,6 @@ set scrolloff=3
 
 "Enable persistent undo
 set undofile                "Save undo history when a file is closed
-set undodir=$HOME/.vim/undo "Where to save undo histories
+set undodir=$HOME/.vim/undo "Where to save undo histories (must create this dir manually)
 set undolevels=1000         "How many undos to save
 set undoreload=10000        "Number of lines to save for undo
