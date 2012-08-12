@@ -11,3 +11,6 @@
 	editor = /usr/bin/vim
 [merge]
 	tool = vimdiff
+[user]
+	name = Ben Striegel
+	email = ben.striegel@gmail.com
