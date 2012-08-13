@@ -1,5 +1,5 @@
 "Use Pathogen to manage plugins
-call pathogen#infect()  
+call pathogen#infect()
 
 "Turn this off if needing to copy into something like PuTTY
 "filetype plugin indent on
@@ -11,7 +11,7 @@ syntax on
 colorscheme torte
 
 "Turn on line numbers
-set number  
+set number
 
 "Set up syntax highlighting for Rust (.rs) files
 au BufRead,BufNewFile *.rs set filetype=rust
@@ -62,7 +62,7 @@ noremap x "_x
 vnoremap p "_dP
 
 "Disable vi-compatible backspace behavior
-set backspace=indent,eol,start 
+set backspace=indent,eol,start
 "Disable vi compatibility (may be redundant with above)
 set nocompatible
 
@@ -112,3 +112,7 @@ set undofile                "Save undo history when a file is closed
 set undodir=$HOME/.vim/undo "Where to save undo histories (must create this dir manually)
 set undolevels=1000         "How many undos to save
 set undoreload=10000        "Number of lines to save for undo
+
+" Highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+autocmd Syntax * syn match ExtraWhitespace /\s\+$/
