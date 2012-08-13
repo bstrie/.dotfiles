@@ -7,6 +7,15 @@ call pathogen#infect()
 "Turn on syntax highlighting
 syntax on
 
+"Highlight trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red 
+"This command has to come before any colorscheme is set
+autocmd ColorScheme * highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+
 "Love this color scheme
 colorscheme torte
 
@@ -105,14 +114,10 @@ let g:EasyMotion_leader_key = '<Leader>'
 set scrolljump=5
 
 "Cause screen to scroll when within three lines of the edge
-set scrolloff=3
+set scrolloff=5
 
 "Enable persistent undo
 set undofile                "Save undo history when a file is closed
 set undodir=$HOME/.vim/undo "Where to save undo histories (must create this dir manually)
 set undolevels=1000         "How many undos to save
 set undoreload=10000        "Number of lines to save for undo
-
-" Highlight trailing whitespace
-highlight ExtraWhitespace ctermbg=red guibg=red
-autocmd Syntax * syn match ExtraWhitespace /\s\+$/
