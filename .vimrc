@@ -122,3 +122,6 @@ set undofile                "Save undo history when a file is closed
 set undodir=$HOME/.vim/undo "Where to save undo histories (must create this dir manually)
 set undolevels=1000         "How many undos to save
 set undoreload=10000        "Number of lines to save for undo
+
+"In insert mode, map Shift-Tab to ^D, a.k.a. delete to next tabstop
+inoremap <s-tab> <c-d>
