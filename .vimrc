@@ -125,3 +125,8 @@ set undoreload=10000        "Number of lines to save for undo
 
 "In insert mode, map Shift-Tab to ^D, a.k.a. delete to next tabstop
 inoremap <s-tab> <c-d>
+
+"Mash j and k rather than reaching for Esc
+inoremap kj <Esc>
+inoremap jk <Esc>
+inoremap <Esc> <NOP>
