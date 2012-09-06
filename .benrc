@@ -1,5 +1,3 @@
-# .benrc
-
 alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
@@ -10,6 +8,7 @@ alias la='ls -A'
 alias ll='ls -l'
 alias ap='aptitude'
 alias gg='git grep'
+alias tmux='TERM=screen-256color-bce tmux -2'
 
 # http://stackoverflow.com/questions/4332478/read-the-current-text-color-in-a-xterm/4332530#4332530
 BLACK=$(tput setaf 0)
@@ -20,8 +19,6 @@ BLUE=$(tput setaf 4)
 MAGENTA=$(tput setaf 5)
 CYAN=$(tput setaf 6)
 WHITE=$(tput setaf 7)
-LIME_YELLOW=$(tput setaf 190)
-POWDER_BLUE=$(tput setaf 153)
 BRIGHT=$(tput bold)
 NORMAL=$(tput sgr0)
 BLINK=$(tput blink)
@@ -34,8 +31,7 @@ source ~/.git-completion.bash
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWSTASHSTATE=true
 
-# If we're root, highlight it in the PS1
-#!/bin/bash
+# If we're root, change our PS1
 if [[ $EUID -ne 0 ]]; then
     USERCOLOR=${WHITE}
     USERSYMBOL='⌁'
@@ -47,6 +43,7 @@ fi
 # Fix long lines gobbling the prompt with \[ and \]
 PS1='\n${BRIGHT}${MAGENTA}\u@\h:\w${NORMAL}$(__git_ps1 " [%s]")\n\[${USERCOLOR}\]${USERSYMBOL}\[${NORMAL}\] '
 
+# Default editor
 export VISUAL='/usr/bin/vim'
 
 shopt -s autocd  # Type just the name of a directory to cd to it
