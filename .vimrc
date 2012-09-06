@@ -36,8 +36,10 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-"Disable h and l
+"Disable h j k l
 nmap h <NOP>
+nmap j <NOP>
+nmap k <NOP>
 nmap l <NOP>
 
 "Always uses spaces instead of tab characters
