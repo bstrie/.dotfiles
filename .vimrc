@@ -16,7 +16,7 @@ autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 
-"Love this color scheme
+"Delicious
 colorscheme torte
 
 "Turn on line numbers
