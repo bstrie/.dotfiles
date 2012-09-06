@@ -1,9 +1,2 @@
-" Vim indent file
-
-if exists("b:did_indent")
-	finish
-endif
-
-let b:did_indent = 1
-
-setlocal cindent
+"Highlight the 72nd text column:
+set colorcolumn=72

@@ -127,3 +127,6 @@ set undoreload=10000        "Number of lines to save for undo
 
 "In insert mode, map Shift-Tab to ^D, a.k.a. delete to next tabstop
 inoremap <s-tab> <c-d>
+
+"Tell vim to interpret our .vim/after/ftplugin files
+filetype plugin on
