@@ -1,2 +1,2 @@
-"Highlight the 72nd text column:
-set colorcolumn=72
+"Highlight the 78nd text column:
+set colorcolumn=78
