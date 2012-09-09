@@ -38,8 +38,6 @@ noremap   <Right>  <NOP>
 
 "Disable h j k l
 nmap h <NOP>
-nmap j <NOP>
-nmap k <NOP>
 nmap l <NOP>
 
 "Always uses spaces instead of tab characters
