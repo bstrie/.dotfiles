@@ -130,4 +130,4 @@ inoremap <s-tab> <c-d>
 filetype plugin on
 
 "Highlight .md files as markdown rather than Modula-2
-au BufNewFile,BufRead *.md setf markdown
+autocmd BufWinEnter,BufNewFile,BufRead *.md silent setf markdown
