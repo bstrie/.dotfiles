@@ -1,4 +1,5 @@
 "Use Pathogen to manage plugins
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
 "Turn this off if needing to copy into something like PuTTY
