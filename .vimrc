@@ -132,3 +132,12 @@ filetype plugin on
 
 "Highlight .md files as markdown rather than Modula-2
 autocmd BufWinEnter,BufNewFile,BufRead *.md silent setf markdown
+
+"Turn off the unicode characters in NERDTree
+let g:NERDTreeDirArrows=0
+
+"If no files were specified, open NERDTree
+autocmd vimenter * if !argc() | NERDTree | endif
+
+"Exit vim if NERDTree is the only remaining buffer
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
