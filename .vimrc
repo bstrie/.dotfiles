@@ -141,6 +141,3 @@ autocmd vimenter * if !argc() | NERDTree | endif
 
 "Exit vim if NERDTree is the only remaining buffer
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
-
-"Tell Powerline to use its custom glyphs
-let g:Powerline_symbols = 'fancy'
