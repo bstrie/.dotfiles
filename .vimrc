@@ -156,3 +156,8 @@ augroup FastEscape
     au InsertEnter * set timeoutlen=0
     au InsertLeave * set timeoutlen=1000
 augroup END
+
+"Normalize the length of mode names in Powerline, for my sanity
+let g:Powerline_mode_R = 'RPLACE'
+let g:Powerline_mode_cv = 'V⋅BLOK'
+let g:Powerline_mode_cs = 'S⋅BLOK'
