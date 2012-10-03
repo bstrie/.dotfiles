@@ -148,3 +148,11 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 
 "Tell Powerline to use its custom glyphs
 let g:Powerline_symbols = 'fancy'
+
+"Instantly leave insert mode when pressing Esc
+set ttimeoutlen=10
+augroup FastEscape
+    autocmd!
+    au InsertEnter * set timeoutlen=0
+    au InsertLeave * set timeoutlen=1000
+augroup END
