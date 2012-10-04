@@ -177,21 +177,21 @@ statusbar = {
 
     # treated "normally", you could change the time/user name to whatever
     time = "{sb $Z}";
-    user = "{sb {sbnickmode $cumode}$N{sbmode $usermode}{sbaway $A}}";
+    user = "{sb %k%7 {sbnickmode $cumode}$N{sbmode $usermode}{sbaway $A} %F%w%4⮀}";
 
     # treated specially .. window is printed with non-empty windows,
     # window_empty is printed with empty windows
-    window = "{sb $winref:$tag/$itemname{sbmode $M}}";
-    window_empty = "{sb $winref{sbservertag $tag}}";
+    window = "{sb %F%w%4 $winref: $tag/$itemname{sbmode $M}} %F%B%4⮀";
+    window_empty = "{sb %w%4 $winref{sbservertag $tag}$winname %b%4⮀}";
     prompt = "{prompt $[.15]itemname}";
     prompt_empty = "{prompt $winname}";
     topic = " $topic";
     topic_empty = " Irssi v$J - http://www.irssi.org";
 
     # all of these treated specially, they're only displayed when needed
-    lag = "{sb Lag: $0-}";
-    act = "{sb Act: $0-}";
-    more = "-- more --";
+    lag = "{sb  Lag: $0- ⮁}";
+    act = "{sb  Act: $0- ⮁}";
+    more = "%c⮂%w%6 -- more -- ";
   };
 
   # there's two type of statusbars. root statusbars are either at the top
@@ -218,8 +218,8 @@ statusbar = {
         user = { };
         window = { };
         window_empty = { };
-        lag = { priority = "-1"; };
         usercount = { priority = "20"; };
+        lag = { priority = "-1"; };
         act = { priority = "10"; };
         more = { priority = "-1"; alignment = "right"; };
         barend = { priority = "100"; alignment = "right"; };

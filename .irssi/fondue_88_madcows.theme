@@ -229,10 +229,10 @@ abstracts = {
 
   # text at the beginning of statusbars. sb-item already puts
   # space there,so we don't use anything by default.
-  sbstart = " %W>%n";
+  sbstart = "";
   # text at the end of statusbars. Use space so that it's never
   # used for anything.
-  sbend = " %W<%n ";
+  sbend = "";
 
   topicsbstart = "{sbstart $*}";
   topicsbend = "{sbend $*}";
@@ -240,10 +240,11 @@ abstracts = {
   #  prompt = "%w$S%B/%w$*%n%B:%W ";
   prompt = "%w$*%n%B:%W ";
 
-  sb = " %w$*%n";
-  sbmode = " (+%W$*%n)";
+  sb = "$*";
+  sbmode = "";
+  #sbmode = " (+%W$*%n)";
   sbaway = " (%Waway%n)";
-  sbservertag = ":$1";
+  sbservertag = ": $1";
   sbnickmode = "%W$0%n";
 
   # activity in statusbar
@@ -260,7 +261,8 @@ abstracts = {
   sb_act_hilight_color = "$0$1-%n";
 
   #usercount
-  sb_usercount = "{sb %W[%w$0%n $1-]}";
+  sb_usercount = "{sb %w Users: $0 ⮁}";
+  #sb_usercount = "{sb %W[%w$0%n $1-]}";
   sb_uc_ircops = "%wi:%w$*%n ";
   sb_uc_ops = "%wo:%w$*%n ";
   sb_uc_halfops = "";
