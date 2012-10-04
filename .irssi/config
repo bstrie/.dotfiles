@@ -285,7 +285,11 @@ settings = {
     theme = "fondue_88_madcows";
   };
 };
-hilights = ( { text = "roque"; nick = "yes"; word = "yes"; } );
+hilights = (
+  { text = "roque"; nick = "yes"; word = "yes"; },
+  { text = "Wensley"; nick = "yes"; word = "yes"; },
+  { text = "bstrie"; nick = "yes"; word = "yes"; }
+);
 windows = {
   1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
   2 = { name = "hilight"; };
