@@ -278,9 +278,10 @@ settings = {
     actlist_sort = "refnum";
     autostick_split_windows = "yes";
   };
-  "fe-common/core" = { 
+  "fe-common/core" = {
     use_msgs_window = "no";
     use_status_window = "yes";
+    theme = "fondue_88_madcows";
   };
 };
 hilights = ( { text = "roque"; nick = "yes"; word = "yes"; } );
