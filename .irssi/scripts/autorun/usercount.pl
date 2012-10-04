@@ -65,7 +65,7 @@ sub usercount {
           Irssi::EXPAND_FLAG_IGNORE_EMPTY);
 	my $space = $theme->format_expand('{sb_uc_space}',
          Irssi::EXPAND_FLAG_IGNORE_EMPTY);
-	$space = " " unless $space;
+	$space = "" unless $space;
 
     my $str = "";
     $str .= $ircopstr.$space if defined $ircops;

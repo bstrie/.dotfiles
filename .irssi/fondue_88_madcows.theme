@@ -229,7 +229,7 @@ abstracts = {
 
   # text at the beginning of statusbars. sb-item already puts
   # space there,so we don't use anything by default.
-  sbstart = " %W>%n ";
+  sbstart = " %W>%n";
   # text at the end of statusbars. Use space so that it's never
   # used for anything.
   sbend = " %W<%n ";
@@ -260,13 +260,13 @@ abstracts = {
   sb_act_hilight_color = "$0$1-%n";
 
   #usercount
-  sb_usercount = "{sb %W[%w$0%n $1-}";
-  sb_uc_ircops = "%wi/%w$*%n";
-  sb_uc_ops = "%wo/%w$*%n";
-  sb_uc_halfops = "%wh/%w$*%n";
-  sb_uc_voices = "%wv/%w$*%n";
-  sb_uc_normal = "%wn/%w$*%W]%n";
-  sb_uc_space = " ";
+  sb_usercount = "{sb %W[%w$0%n $1-]}";
+  sb_uc_ircops = "%wi:%w$*%n ";
+  sb_uc_ops = "%wo:%w$*%n ";
+  sb_uc_halfops = "";
+  sb_uc_voices = "%wv:%w$*%n";
+  sb_uc_normal = "";
+  sb_uc_space = "";
 
   #nact
   nact_display = "%W(%w$3%n%W)%n$0%G>%W$1%R>%n$2%W(%w$4%W)%n";
