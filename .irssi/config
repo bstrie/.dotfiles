@@ -294,3 +294,4 @@ windows = {
   2 = { name = "hilight"; };
 };
 mainwindows = { 1 = { first_line = "1"; lines = "19"; }; };
+keyboard = ( { key = "^R"; id = "command"; data = "history_search "; } );
