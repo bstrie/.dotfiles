@@ -161,3 +161,6 @@ augroup END
 let g:Powerline_mode_R = 'RPLACE'
 let g:Powerline_mode_cv = 'V⋅BLOK'
 let g:Powerline_mode_cs = 'S⋅BLOK'
+
+"Disable comment autoinsertion
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
