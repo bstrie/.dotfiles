@@ -55,3 +55,7 @@ shopt -s extglob  # Turn on extended pattern matching via globs
 
 # Prevent ^S from doing its thing
 stty stop undef
+
+# Improvements to history
+export HISTSIZE=100000000
+export HISTCONTROL='ignoreboth:erasedups'
