@@ -164,3 +164,6 @@ let g:Powerline_mode_cs = 'S⋅BLOK'
 
 "Disable comment autoinsertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+set ssop-=options " Do not store .vimrc options in a session
+set ssop-=folds " Do not store folds in a session
