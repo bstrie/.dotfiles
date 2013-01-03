@@ -106,6 +106,14 @@ chatnets = {
   m = { type = "IRC"; };
 };
 
+# ##php
+# #python
+# #ruby-lang
+# #go-nuts
+# ##c
+# ##c++
+# #haskell
+# ##programming
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "silc"; chatnet = "silc"; autojoin = "No"; }
@@ -284,10 +292,11 @@ settings = {
     theme = "fondue_88_madcows";
   };
 };
+# /hilight -regexp (^|\s)rust([^y]|$)
 hilights = (
   { text = "roque"; nick = "yes"; word = "yes"; },
   { text = "Wensley"; nick = "yes"; word = "yes"; },
-  { text = "bstrie"; nick = "yes"; word = "yes"; }
+  { text = "bstrie"; nick = "yes"; word = "yes"; },
 );
 windows = {
   1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
