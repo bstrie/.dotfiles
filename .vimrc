@@ -2,11 +2,13 @@
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 
-"Turn this off if needing to copy into something like PuTTY
-"filetype plugin indent on
+"Automatic indentation
+set smartindent
 
 "Turn on syntax highlighting
 syntax on
+"Syntax highlighting colorscheme
+colorscheme torte
 
 "Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red 
@@ -16,9 +18,6 @@ match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
-
-"Delicious
-colorscheme torte
 
 "Turn on line numbers
 set number
@@ -37,7 +36,7 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-"Disable h j k l
+"Disable h l
 nmap h <NOP>
 nmap l <NOP>
 
@@ -59,7 +58,7 @@ set hlsearch
 "Incremental search
 set incsearch
 
-"Searches ignore case unless the contain at least one capital letter
+"Searches ignore case unless they contain at least one capital letter
 set ignorecase
 set smartcase
 
@@ -113,7 +112,7 @@ augroup END
 let g:EasyMotion_leader_key = '<Leader>'
 
 "Jump five lines when scrolling at edge of screen
-set scrolljump=5
+set scrolljump=1
 
 "Cause screen to scroll when within three lines of the edge
 set scrolloff=5
@@ -164,3 +163,17 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
 set ssop-=options " Do not store .vimrc options in a session
 set ssop-=folds " Do not store folds in a session
+
+"Toggle line numbering
+nmap \l :setlocal number!<CR>
+
+"Toggle paste mode
+nmap \p :set paste!<CR>
+
+"Turn off highlighting for last search
+nmap \q :nohlsearch<CR>
+
+"Make j and k move row-wise rather than linewise.
+"This only make a difference when in a line that is longer than the width of the terminal.
+nmap j gj
+nmap k gk
