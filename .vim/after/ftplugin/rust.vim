@@ -1,2 +1,5 @@
 "Highlight the 78th text column
-set colorcolumn=78
+"Feature became available in v7.3
+if version >= 703
+    set colorcolumn=78
+endif
