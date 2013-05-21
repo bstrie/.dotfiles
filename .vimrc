@@ -177,3 +177,9 @@ nmap \q :nohlsearch<CR>
 "This only make a difference when in a line that is longer than the width of the terminal.
 nmap j gj
 nmap k gk
+
+"Map ^j and ^k to next and previous buffer, and ^l and ^h to next and previous tab.
+map <C-J> :bnext<CR>
+map <C-K> :bprev<CR>
+map <C-L> :tabn<CR>
+map <C-H> :tabp<CR>
