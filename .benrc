@@ -10,6 +10,7 @@ alias la='ls -A'
 alias ll='ls -l'
 alias ap='aptitude'
 alias gg='git grep'
+alias gd='git diff -w --color-words'
 alias tmux='TERM=screen-256color-bce tmux -2'
 alias v='vim'
 
