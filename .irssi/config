@@ -293,6 +293,7 @@ settings = {
   };
 };
 # /hilight -regexp (^|\s)rust([^y]|$)
+# /ignore -channels #rust * JOINS PARTS QUITS NICKS
 hilights = (
   { text = "roque"; nick = "yes"; word = "yes"; },
   { text = "Wensley"; nick = "yes"; word = "yes"; },
