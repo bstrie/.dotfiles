@@ -173,6 +173,21 @@ nmap \p :set paste!<CR>
 "Turn off highlighting for last search
 nmap \q :nohlsearch<CR>
 
+"Toggle hex edit mode
+nmap \h :call ToggleHex()<CR>
+
+let g:hex_mode_on = 0
+
+function! ToggleHex()
+    if g:hex_mode_on
+        execute "%!xxd -r"
+        let g:hex_mode_on = 0
+    else
+        execute "%!xxd"
+        let g:hex_mode_on = 1
+    endif
+endfunction
+
 "Make j and k move row-wise rather than linewise.
 "This only make a difference when in a line that is longer than the width of the terminal.
 nmap j gj
