@@ -53,6 +53,7 @@ export VISUAL='/usr/bin/vim'
 shopt -s autocd  # Type just the name of a directory to cd to it
 shopt -s checkjobs  # Don't let us exit the session if there are stopped jobs
 shopt -s extglob  # Turn on extended pattern matching via globs
+shopt -s globstar  # Refer to files deep in a directory with **/foo
 
 # Prevent ^S from doing its thing
 stty stop undef
