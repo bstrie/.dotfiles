@@ -165,16 +165,16 @@ set ssop-=options " Do not store .vimrc options in a session
 set ssop-=folds " Do not store folds in a session
 
 "Toggle line numbering
-nmap \l :setlocal number!<CR>
+nmap <Leader>l :setlocal number!<CR>
 
 "Toggle paste mode
-nmap \p :set paste!<CR>
+nmap <Leader>p :set paste!<CR>
 
 "Turn off highlighting for last search
-nmap \q :nohlsearch<CR>
+nmap <Leader>q :nohlsearch<CR>
 
 "Toggle hex edit mode
-nmap \h :call ToggleHex()<CR>
+nmap <Leader>h :call ToggleHex()<CR>
 
 let g:hex_mode_on = 0
 
