@@ -297,6 +297,10 @@ settings = {
 # /window immortal on
 # /hilight -regexp (^|\s)rust([^y]|$)
 # /ignore -channels #go-nuts,#haskell,##programming,#d,#rust,#BitC,#nimrod,#idris,#python,##c,##c++ * JOINS PARTS QUITS NICKS
+
+# HOW TO OP:
+# identify with nickserv
+# /msg chanserv op #rust
 hilights = (
   { text = "Wensley"; nick = "yes"; word = "yes"; },
   { text = "bstrie"; nick = "yes"; word = "yes"; },
