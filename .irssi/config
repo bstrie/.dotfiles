@@ -296,7 +296,7 @@ settings = {
 # /window name hilight
 # /window immortal on
 # /hilight -regexp (^|\s)rust([^y]|$)
-# /ignore -channels #go-nuts,#haskell,##programming,#d,#rust,#BitC,#nimrod,#idris,#python,##c,##c++ * JOINS PARTS QUITS NICKS
+# /ignore -channels #go-nuts,#haskell,##programming,#d,#rust,#ruby,#clojure,#BitC,#nimrod,#idris,#python,##c,##c++,##c++-general * JOINS PARTS QUITS NICKS
 
 # HOW TO OP:
 # identify with nickserv
