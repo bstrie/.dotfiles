@@ -106,14 +106,17 @@ chatnets = {
   m = { type = "IRC"; };
 };
 
+# #rust
 # #go-nuts
 # #haskell
 # ##programming
 # #d
-# #rust
 # #python
 # ##c
 # ##c++
+# #ruby
+# #nimrod
+# #idris
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "silc"; chatnet = "silc"; autojoin = "No"; }
