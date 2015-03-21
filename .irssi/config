@@ -329,7 +329,7 @@ ignores = (
       "#haskell",
       "##programming",
       "#d",
-      "#rust",
+      "##rust",
       "#ruby",
       "#clojure",
       "#BitC",
