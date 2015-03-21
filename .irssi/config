@@ -325,20 +325,31 @@ ignores = (
   {
     level = "JOINS PARTS QUITS NICKS";
     channels = (
+      # Rust
+      "#rust-offtopic",
+      "#servo",
+      # Nerds
+      "#trains",
+      "#trains-offtopic",
+      "#ptopology",
+      "#epsilonz",
+      # Languages
+      "##rust",
+      "##programming",
+      "##c",
+      "##c++",
+      "##c++-general",
+      "#nimrod",
+      "#d",
       "#go-nuts",
       "#haskell",
-      "##programming",
-      "#d",
-      "##rust",
       "#ruby",
       "#clojure",
       "#BitC",
-      "#nimrod",
       "#idris",
       "#python",
-      "##c",
-      "##c++",
-      "##c++-general"
+      # Crawl
+      "##crawl-dev",
     );
   }
 );
