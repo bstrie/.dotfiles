@@ -3,3 +3,6 @@
 /join #trains-offtopic
 /join #ptopology
 /join #epsilonz
+/join ##c
+/join #python
+/hilight -regexp (^|\s)rust([^y]|$)

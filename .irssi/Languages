@@ -1,5 +1,4 @@
 /join ##programming
-/join ##c
 /join ##c++
 /join ##c++-general
 /join #nimrod
@@ -10,4 +9,4 @@
 /join #clojure
 /join #BitC
 /join #idris
-/join #python
+/hilight -regexp (^|\s)rust([^y]|$)
