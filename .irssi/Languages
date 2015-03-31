@@ -7,6 +7,5 @@
 /join #haskell
 /join #ruby
 /join #clojure
-/join #BitC
 /join #idris
 /hilight -regexp (^|\s)rust([^y]|$)
