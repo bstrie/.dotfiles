@@ -310,7 +310,6 @@ hilights = (
   { text = "Wensley"; nick = "yes"; word = "yes"; },
   { text = "bstrie"; nick = "yes"; word = "yes"; },
   {
-    #text = "(^|\\s)rust([^y]|$)";
     nick = "yes";
     word = "yes";
     regexp = "yes";

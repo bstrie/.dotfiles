@@ -5,4 +5,5 @@
 /join ##c
 /join #python
 /join #rust
+/ignore -channels ##rust,#trains,#trains-offtopic,#ptopology,##c,#python,#rust * JOINS PARTS QUITS NICKS
 /hilight -regexp (^|\s)rust([^y]|$)

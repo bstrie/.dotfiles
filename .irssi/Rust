@@ -6,3 +6,4 @@
 /join #rust-osdev
 /join #rust-webdev
 /join #rust-beginners
+/ignore -channels #rust-internals,#rust-offtopic,#servo,#rust-gamedev,#rust-osdev,#rust-webdev * JOINS PARTS QUITS NICKS
