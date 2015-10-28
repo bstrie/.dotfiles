@@ -2,7 +2,7 @@
 /join #trains
 /join #trains-offtopic
 /join #ptopology
-/join #epsilonz
 /join ##c
 /join #python
+/join #rust
 /hilight -regexp (^|\s)rust([^y]|$)

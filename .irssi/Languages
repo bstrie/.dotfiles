@@ -8,4 +8,5 @@
 /join #ruby
 /join #clojure
 /join #idris
+/join #crystal
 /hilight -regexp (^|\s)rust([^y]|$)
