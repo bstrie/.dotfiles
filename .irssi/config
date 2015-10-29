@@ -309,11 +309,7 @@ settings = {
 hilights = (
   { text = "Wensley"; nick = "yes"; word = "yes"; },
   { text = "bstrie"; nick = "yes"; word = "yes"; },
-  {
-    nick = "yes";
-    word = "yes";
-    regexp = "yes";
-  }
+  { nick = "yes"; word = "yes"; regexp = "yes"; }
 );
 windows = {
   1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
@@ -350,6 +346,17 @@ ignores = (
       "#python",
       # Crawl
       "##crawl-dev"
+    );
+  },
+  {
+    level = "JOINS PARTS QUITS NICKS";
+    channels = (
+      "#rust-internals",
+      "#rust-offtopic",
+      "#servo",
+      "#rust-gamedev",
+      "#rust-osdev",
+      "#rust-webdev"
     );
   }
 );
