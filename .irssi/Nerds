@@ -2,8 +2,9 @@
 /join #trains
 /join #trains-offtopic
 /join #ptopology
+/join #newguard
 /join ##c
 /join #python
 /join #rust
-/ignore -channels ##rust,#trains,#trains-offtopic,#ptopology,##c,#python,#rust * JOINS PARTS QUITS NICKS
+/ignore -channels ##rust,#trains,#trains-offtopic,#ptopology,#newguard,##c,#python,#rust * JOINS PARTS QUITS NICKS
 /hilight -regexp (^|\s)rust([^y]|$)
