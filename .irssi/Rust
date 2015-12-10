@@ -1,9 +1,10 @@
 /join #rust
+/join #rust-beginners
 /join #rust-internals
 /join #rust-offtopic
+/join #rust-community
 /join #servo
 /join #rust-gamedev
 /join #rust-osdev
 /join #rust-webdev
-/join #rust-beginners
-/ignore -channels #rust-internals,#rust-offtopic,#servo,#rust-gamedev,#rust-osdev,#rust-webdev * JOINS PARTS QUITS NICKS
+/ignore -channels #rust-internals,#rust-offtopic,#rust-community,#servo,#rust-gamedev,#rust-osdev,#rust-webdev * JOINS PARTS QUITS NICKS
