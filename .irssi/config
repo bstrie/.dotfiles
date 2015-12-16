@@ -358,5 +358,17 @@ ignores = (
       "#rust-osdev",
       "#rust-webdev"
     );
+  },
+  {
+    level = "JOINS PARTS QUITS NICKS";
+    channels = (
+      "#rust-internals",
+      "#rust-offtopic",
+      "#rust-community",
+      "#servo",
+      "#rust-gamedev",
+      "#rust-osdev",
+      "#rust-webdev"
+    );
   }
 );
