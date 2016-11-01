@@ -1,3 +1,6 @@
+# HOW TO REDIRECT #RUST TO ##RUST
+# 1. op in both channels
+# 2. in #rust, /mode +i then /mode +f ##rust
 servers = (
   { address = "eu.irc6.net"; chatnet = "IRCnet"; port = "6667"; },
   { address = "open.ircnet.net"; chatnet = "IRCnet"; port = "6667"; },
@@ -309,7 +312,13 @@ settings = {
 hilights = (
   { text = "Wensley"; nick = "yes"; word = "yes"; },
   { text = "bstrie"; nick = "yes"; word = "yes"; },
-  { nick = "yes"; word = "yes"; regexp = "yes"; }
+  { nick = "yes"; word = "yes"; regexp = "yes"; },
+  {
+    text = "(^|\\s)rust([^y]|$)";
+    nick = "yes";
+    word = "yes";
+    regexp = "yes";
+  }
 );
 windows = {
   1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
@@ -369,6 +378,28 @@ ignores = (
       "#rust-gamedev",
       "#rust-osdev",
       "#rust-webdev"
+    );
+  },
+  {
+    level = "JOINS PARTS QUITS NICKS";
+    channels = (
+      "#rust-internals",
+      "#rust-offtopic",
+      "#rust-community",
+      "#servo"
+    );
+  },
+  {
+    level = "JOINS PARTS QUITS NICKS";
+    channels = (
+      "##rust",
+      "#trains",
+      "#trains-offtopic",
+      "#ptopology",
+      "#newguard",
+      "##c",
+      "#python",
+      "#rust"
     );
   }
 );
