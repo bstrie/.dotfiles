@@ -10,5 +10,6 @@
 /join #idris
 /join #crystal-lang
 /join #scala
-/ignore -channels ##programming,##c++,##c++-general,#nimrod,#d,#go-nuts,#haskell,#ruby,#clojure,#idris,#crystal-lang,#scala * JOINS PARTS QUITS NICKS
+/join ##csharp
+/ignore -channels ##programming,##c++,##c++-general,#nimrod,#d,#go-nuts,#haskell,#ruby,#clojure,#idris,#crystal-lang,#scala,##csharp * JOINS PARTS QUITS NICKS
 /hilight -regexp (^|\s)rust([^y]|$)
