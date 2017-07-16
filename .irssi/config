@@ -1,5 +1,5 @@
 # HOW TO REDIRECT #RUST TO ##RUST
-# 1. op in both channels
+# 1. op in both channels (/msg chanserv op #rust)
 # 2. in #rust, /mode +i then /mode +f ##rust
 servers = (
   { address = "eu.irc6.net"; chatnet = "IRCnet"; port = "6667"; },
@@ -312,7 +312,12 @@ settings = {
 hilights = (
   { text = "Wensley"; nick = "yes"; word = "yes"; },
   { text = "bstrie"; nick = "yes"; word = "yes"; },
-  { nick = "yes"; word = "yes"; regexp = "yes"; },
+  {
+    text = "(^|\\s)rust([^y]|$)";
+    nick = "yes";
+    word = "yes";
+    regexp = "yes";
+  },
   {
     text = "(^|\\s)rust([^y]|$)";
     nick = "yes";
@@ -400,6 +405,24 @@ ignores = (
       "##c",
       "#python",
       "#rust"
+    );
+  },
+  {
+    level = "JOINS PARTS QUITS NICKS";
+    channels = (
+      "##programming",
+      "##c++",
+      "##c++-general",
+      "#nimrod",
+      "#d",
+      "#go-nuts",
+      "#haskell",
+      "#ruby",
+      "#clojure",
+      "#idris",
+      "#crystal-lang",
+      "#scala",
+      "##csharp"
     );
   }
 );
