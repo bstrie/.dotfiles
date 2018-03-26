@@ -312,18 +312,6 @@ settings = {
 hilights = (
   { text = "Wensley"; nick = "yes"; word = "yes"; },
   { text = "bstrie"; nick = "yes"; word = "yes"; },
-  {
-    text = "(^|\\s)rust([^y]|$)";
-    nick = "yes";
-    word = "yes";
-    regexp = "yes";
-  },
-  {
-    text = "(^|\\s)rust([^y]|$)";
-    nick = "yes";
-    word = "yes";
-    regexp = "yes";
-  }
 );
 windows = {
   1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
@@ -388,6 +376,24 @@ ignores = (
   {
     level = "JOINS PARTS QUITS NICKS";
     channels = (
+      "##programming",
+      "##c++",
+      "##c++-general",
+      "#nimrod",
+      "#d",
+      "#go-nuts",
+      "#haskell",
+      "#ruby",
+      "#clojure",
+      "#idris",
+      "#crystal-lang",
+      "#scala",
+      "##csharp"
+    );
+  },
+  {
+    level = "JOINS PARTS QUITS NICKS";
+    channels = (
       "#rust-internals",
       "#rust-offtopic",
       "#rust-community",
@@ -405,24 +411,6 @@ ignores = (
       "##c",
       "#python",
       "#rust"
-    );
-  },
-  {
-    level = "JOINS PARTS QUITS NICKS";
-    channels = (
-      "##programming",
-      "##c++",
-      "##c++-general",
-      "#nimrod",
-      "#d",
-      "#go-nuts",
-      "#haskell",
-      "#ruby",
-      "#clojure",
-      "#idris",
-      "#crystal-lang",
-      "#scala",
-      "##csharp"
     );
   }
 );
