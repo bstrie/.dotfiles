@@ -3,5 +3,4 @@
 /join #rust-internals
 /join #rust-offtopic
 /join #rust-community
-/join #servo
-/ignore -channels #rust-internals,#rust-offtopic,#rust-community,#servo * JOINS PARTS QUITS NICKS
+/ignore -channels #rust-internals,#rust-offtopic,#rust-community * JOINS PARTS QUITS NICKS
