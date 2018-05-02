@@ -311,7 +311,7 @@ settings = {
 # /msg chanserv op #rust
 hilights = (
   { text = "Wensley"; nick = "yes"; word = "yes"; },
-  { text = "bstrie"; nick = "yes"; word = "yes"; },
+  { text = "bstrie"; nick = "yes"; word = "yes"; }
 );
 windows = {
   1 = { immortal = "yes"; name = "(status)"; level = "ALL"; };
@@ -412,5 +412,9 @@ ignores = (
       "#python",
       "#rust"
     );
+  },
+  {
+    level = "JOINS PARTS QUITS NICKS";
+    channels = ( "#rust-internals", "#rust-offtopic", "#rust-community" );
   }
 );
