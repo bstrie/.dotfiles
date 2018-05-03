@@ -109,17 +109,6 @@ chatnets = {
   m = { type = "IRC"; };
 };
 
-# #rust
-# #go-nuts
-# #haskell
-# ##programming
-# #d
-# #python
-# ##c
-# ##c++
-# #ruby
-# #nimrod
-# #idris
 channels = (
   { name = "#irssi"; chatnet = "ircnet"; autojoin = "No"; },
   { name = "silc"; chatnet = "silc"; autojoin = "No"; }
@@ -287,8 +276,8 @@ statusbar = {
   };
 };
 settings = {
-  core = { real_name = "Ben Striegel"; user_name = "ben"; nick = "ben"; };
-  "fe-text" = { 
+  core = { real_name = "punkin"; user_name = "punkin"; nick = "punkin"; };
+  "fe-text" = {
     actlist_sort = "refnum";
     autostick_split_windows = "yes";
   };
@@ -299,18 +288,11 @@ settings = {
     windows_auto_renumber = "no";
   };
 };
-# /window new hidden
-# /window name hilight
-# /window immortal on
-# /hilight -regexp (^|\s)rust([^y]|$)
-# /ignore -channels #go-nuts,#haskell,##programming,#d,#rust,#ruby,#clojure,#BitC,#nimrod,#idris,#python,##c,##c++,##c++-general * JOINS PARTS QUITS NICKS
-# /ignore -channels #rust-gamedev,#rust-osdev,#servo * JOINS PARTS QUITS NICKS
 
 # HOW TO OP:
 # identify with nickserv
 # /msg chanserv op #rust
 hilights = (
-  { text = "Wensley"; nick = "yes"; word = "yes"; },
   { text = "bstrie"; nick = "yes"; word = "yes"; }
 );
 windows = {
@@ -319,102 +301,3 @@ windows = {
 };
 mainwindows = { 1 = { first_line = "1"; lines = "19"; }; };
 keyboard = ( { key = "^R"; id = "command"; data = "history_search "; } );
-ignores = (
-  {
-    level = "JOINS PARTS QUITS NICKS";
-    channels = (
-      # Rust
-      "#rust-offtopic",
-      "#servo",
-      # Nerds
-      "#trains",
-      "#trains-offtopic",
-      "#ptopology",
-      "#epsilonz",
-      # Languages
-      "##rust",
-      "##programming",
-      "##c",
-      "##c++",
-      "##c++-general",
-      "#nimrod",
-      "#d",
-      "#go-nuts",
-      "#haskell",
-      "#ruby",
-      "#clojure",
-      "#BitC",
-      "#idris",
-      "#python",
-      # Crawl
-      "##crawl-dev"
-    );
-  },
-  {
-    level = "JOINS PARTS QUITS NICKS";
-    channels = (
-      "#rust-internals",
-      "#rust-offtopic",
-      "#servo",
-      "#rust-gamedev",
-      "#rust-osdev",
-      "#rust-webdev"
-    );
-  },
-  {
-    level = "JOINS PARTS QUITS NICKS";
-    channels = (
-      "#rust-internals",
-      "#rust-offtopic",
-      "#rust-community",
-      "#servo",
-      "#rust-gamedev",
-      "#rust-osdev",
-      "#rust-webdev"
-    );
-  },
-  {
-    level = "JOINS PARTS QUITS NICKS";
-    channels = (
-      "##programming",
-      "##c++",
-      "##c++-general",
-      "#nimrod",
-      "#d",
-      "#go-nuts",
-      "#haskell",
-      "#ruby",
-      "#clojure",
-      "#idris",
-      "#crystal-lang",
-      "#scala",
-      "##csharp"
-    );
-  },
-  {
-    level = "JOINS PARTS QUITS NICKS";
-    channels = (
-      "#rust-internals",
-      "#rust-offtopic",
-      "#rust-community",
-      "#servo"
-    );
-  },
-  {
-    level = "JOINS PARTS QUITS NICKS";
-    channels = (
-      "##rust",
-      "#trains",
-      "#trains-offtopic",
-      "#ptopology",
-      "#newguard",
-      "##c",
-      "#python",
-      "#rust"
-    );
-  },
-  {
-    level = "JOINS PARTS QUITS NICKS";
-    channels = ( "#rust-internals", "#rust-offtopic", "#rust-community" );
-  }
-);
