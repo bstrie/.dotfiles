@@ -8,7 +8,7 @@ set smartindent
 "Turn on syntax highlighting
 syntax on
 "Syntax highlighting colorscheme
-colorscheme torte
+colorscheme desert
 
 "Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red 
@@ -78,6 +78,9 @@ set fileencoding=utf-8
 "Enable 256-color mode
 set t_Co=256
 
+"Disable bold font
+set t_md=
+
 "Map capital W and Q to lowercase in command mode
 command WQ wq
 command Wq wq
@@ -133,7 +136,7 @@ filetype plugin on
 "autocmd BufWinEnter,BufNewFile,BufRead *.md silent setf markdown
 
 "Tell Powerline to use its custom glyphs
-"let g:Powerline_symbols = 'fancy'
+let g:airline_powerline_fonts = 1
 
 "Instantly leave insert mode when pressing Esc
 set ttimeoutlen=10
@@ -142,11 +145,6 @@ augroup FastEscape
     au InsertEnter * set timeoutlen=0
     au InsertLeave * set timeoutlen=1000
 augroup END
-
-"Normalize the length of mode names in Powerline, for my sanity
-"let g:Powerline_mode_R = 'RPLACE'
-"let g:Powerline_mode_cv = 'V⋅BLOK'
-"let g:Powerline_mode_cs = 'S⋅BLOK'
 
 "Disable comment autoinsertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
