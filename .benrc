@@ -78,3 +78,6 @@ stty stop undef
 # Improvements to history
 export HISTSIZE=100000000
 export HISTCONTROL='ignoreboth:erasedups'
+
+# Autojump is rad
+source /usr/share/autojump/autojump.sh
