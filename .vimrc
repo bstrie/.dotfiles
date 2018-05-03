@@ -22,10 +22,6 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 "Turn on line numbers
 set number
 
-"Set up syntax highlighting for Rust (.rs) files
-au BufRead,BufNewFile *.rs set filetype=rust
-au! Syntax rust source ~/.vim/syntax/rust.vim
-
 "Disable arrow keys
 inoremap  <Up>     <NOP>
 inoremap  <Down>   <NOP>
@@ -134,16 +130,10 @@ nnoremap <c-b> <c-u>
 filetype plugin on
 
 "Highlight .md files as markdown rather than Modula-2
-autocmd BufWinEnter,BufNewFile,BufRead *.md silent setf markdown
-
-"Turn off the unicode characters in NERDTree
-let g:NERDTreeDirArrows=0
-
-"Exit vim if NERDTree is the only remaining buffer
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"autocmd BufWinEnter,BufNewFile,BufRead *.md silent setf markdown
 
 "Tell Powerline to use its custom glyphs
-let g:Powerline_symbols = 'fancy'
+"let g:Powerline_symbols = 'fancy'
 
 "Instantly leave insert mode when pressing Esc
 set ttimeoutlen=10
@@ -154,9 +144,9 @@ augroup FastEscape
 augroup END
 
 "Normalize the length of mode names in Powerline, for my sanity
-let g:Powerline_mode_R = 'RPLACE'
-let g:Powerline_mode_cv = 'V⋅BLOK'
-let g:Powerline_mode_cs = 'S⋅BLOK'
+"let g:Powerline_mode_R = 'RPLACE'
+"let g:Powerline_mode_cv = 'V⋅BLOK'
+"let g:Powerline_mode_cs = 'S⋅BLOK'
 
 "Disable comment autoinsertion
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o

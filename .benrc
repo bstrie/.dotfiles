@@ -4,15 +4,12 @@ alias rm='rm -i'
 alias cp='cp -i'
 alias mv='mv -i'
 alias ..='cd ..'
-alias ls='ls --color=auto --group-directories-first -F'
-alias l='ls'
-alias la='ls -A'
-alias ll='ls -l'
-alias ap='aptitude'
+alias l='ls -F'
+alias la='ls -FA'
+alias ll='ls -Fl'
 alias gg='git grep'
 alias gd='git diff -w --color-words'
-alias tmux='TERM=screen-256color-bce tmux -2'
-alias v='vim'
+#alias tmux='TERM=screen-256color-bce tmux -2'
 
 # http://stackoverflow.com/questions/4332478/read-the-current-text-color-in-a-xterm/4332530#4332530
 BLACK=$(tput setaf 0)
@@ -31,9 +28,11 @@ UNDERLINE=$(tput smul)
 # echo "${RED}this is red ${NORMAL}this is normal"
 
 # Make it so that the prompt knows when we're in a git repo
-source ~/.git-completion.bash
+source ~/.dotfiles/.git-prompt.sh
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWSTASHSTATE=true
+export GIT_PS1_SHOWUNTRACKEDFILES=true
+export GIT_PS1_STATESEPARATOR=''
 
 # If we're root, change our PS1
 if [[ $EUID -ne 0 ]]; then
@@ -45,12 +44,30 @@ else
 fi
 
 # Fix long lines gobbling the prompt with \[ and \]
-PS1='\n${BRIGHT}${MAGENTA}\u@\h:\w${NORMAL}$(__git_ps1 " [%s]")\n\[${USERCOLOR}\]${USERSYMBOL}\[${NORMAL}\] '
+#PS1='\n${BRIGHT}${MAGENTA}\h:\w${NORMAL}$(__git_ps1 " [%s]")\n\[${USERCOLOR}\]${USERSYMBOL}\[${NORMAL}\] '
+
+function prompt_right() {
+    echo -e '${BRIGHT}${BLACK}\\t${NORMAL}'
+}
+
+function prompt_left() {
+    echo -e '${MAGENTA}\h${NORMAL}:${BRIGHT}${MAGENTA}\w${NORMAL}$(__git_ps1 "@${BRIGHT}${BLUE}%s")'
+}
+
+function prompt_newline() {
+    echo -e '\[${USERCOLOR}\]${USERSYMBOL}\[${NORMAL}\] '
+}
+
+function prompt() {
+    compensate=20
+    PS1=$(printf "\n%*s\r%s\n%s" "$(($(tput cols)+${compensate}))" "$(prompt_right)" "$(prompt_left)" "$(prompt_newline)")
+}
+
+PROMPT_COMMAND=prompt
 
 # Default editor
 export VISUAL='/usr/bin/vim'
 
-shopt -s autocd  # Type just the name of a directory to cd to it
 shopt -s checkjobs  # Don't let us exit the session if there are stopped jobs
 shopt -s extglob  # Turn on extended pattern matching via globs
 shopt -s globstar  # Refer to files deep in a directory with **/foo
