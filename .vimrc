@@ -1,14 +1,5 @@
-"Use Pathogen to manage plugins
-"runtime bundle/vim-pathogen/autoload/pathogen.vim
-"call pathogen#infect()
-
 "Automatic indentation
 set smartindent
-
-"Turn on syntax highlighting
-syntax on
-"Syntax highlighting colorscheme
-"colorscheme desert
 
 "Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red 
@@ -18,6 +9,11 @@ match ExtraWhitespace /\s\+$/
 autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
 autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
 autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+
+"Turn on syntax highlighting
+syntax on
+"Syntax highlighting colorscheme
+colorscheme desert
 
 "Turn on line numbers
 set number
