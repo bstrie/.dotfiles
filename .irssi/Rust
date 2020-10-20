@@ -1,6 +1,0 @@
-/join #rust
-/join #rust-beginners
-/join #rust-internals
-/join #rust-offtopic
-/join #rust-community
-/ignore -channels #rust-internals,#rust-offtopic,#rust-community * JOINS PARTS QUITS NICKS
