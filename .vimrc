@@ -8,7 +8,7 @@ set smartindent
 "Turn on syntax highlighting
 syntax on
 "Syntax highlighting colorscheme
-colorscheme desert
+"colorscheme desert
 
 "Highlight trailing whitespace
 highlight ExtraWhitespace ctermbg=red guibg=red 
@@ -21,20 +21,6 @@ autocmd InsertLeave * match ExtraWhitespace /\s\+$/
 
 "Turn on line numbers
 set number
-
-"Disable arrow keys
-inoremap  <Up>     <NOP>
-inoremap  <Down>   <NOP>
-inoremap  <Left>   <NOP>
-inoremap  <Right>  <NOP>
-noremap   <Up>     <NOP>
-noremap   <Down>   <NOP>
-noremap   <Left>   <NOP>
-noremap   <Right>  <NOP>
-
-"Disable h l
-nmap h <NOP>
-nmap l <NOP>
 
 "Always uses spaces instead of tab characters
 set expandtab
@@ -58,8 +44,8 @@ set incsearch
 set ignorecase
 set smartcase
 
-"Highlight the 80th text column:
-set colorcolumn=80
+"Highlight the 100th text column:
+set colorcolumn=100
 
 "Delete single characters without updating the default register
 noremap x "_x
@@ -110,9 +96,6 @@ augroup END
 "Remap default easymotion leader from \\ to \
 let g:EasyMotion_leader_key = '<Leader>'
 
-"Jump five lines when scrolling at edge of screen
-set scrolljump=1
-
 "Cause screen to scroll when within three lines of the edge
 set scrolloff=5
 
@@ -129,13 +112,7 @@ inoremap <s-tab> <c-d>
 nnoremap <c-f> <c-d>
 nnoremap <c-b> <c-u>
 
-"Tell vim to interpret our .vim/after/ftplugin files
-filetype plugin on
-
-"Highlight .md files as markdown rather than Modula-2
-"autocmd BufWinEnter,BufNewFile,BufRead *.md silent setf markdown
-
-"Tell Powerline to use its custom glyphs
+"Tell Airline to use its custom glyphs
 let g:airline_powerline_fonts = 1
 
 "Instantly leave insert mode when pressing Esc
@@ -177,7 +154,7 @@ function! ToggleHex()
 endfunction
 
 "Make j and k move row-wise rather than linewise.
-"This only make a difference when in a line that is longer than the width of the terminal.
+"This only makes a difference when in a line that is longer than the width of the terminal.
 nmap j gj
 nmap k gk
 
