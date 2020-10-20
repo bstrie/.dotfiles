@@ -1,6 +1,6 @@
 "Use Pathogen to manage plugins
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
+"runtime bundle/vim-pathogen/autoload/pathogen.vim
+"call pathogen#infect()
 
 "Automatic indentation
 set smartindent

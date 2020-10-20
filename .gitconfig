@@ -1,18 +1,5 @@
 [alias]
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-[color]
-	ui = auto
-    branch = auto
-    diff = auto
-    interactive = auto
-    status = auto
-[core]
-	editor = /usr/bin/vim
-[merge]
-	tool = vimdiff
-[user]
-	name = Ben Striegel
-	email = ben.striegel@gmail.com
+lol = log --graph --decorate --pretty=oneline --abbrev-commit
+lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
 [github]
-	user = bstrie
+user = bstrie
