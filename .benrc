@@ -80,4 +80,5 @@ export HISTSIZE=100000000
 export HISTCONTROL='ignoreboth:erasedups'
 
 # Autojump is rad
-source /usr/share/autojump/autojump.sh
+[ -f /usr/share/autojump/autojump.sh ] && . /usr/share/autojump/autojump.sh # Linux
+[ -f $(brew --prefix)/etc/profile.d/autojump.sh ] && . $(brew --prefix)/etc/profile.d/autojump.sh # Mac
