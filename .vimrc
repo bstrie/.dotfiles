@@ -79,7 +79,7 @@ set viminfo='10,\"100,:20,%,n~/.vim/viminfo
 
 "Function to save the cursor position of the previously opened file
 function! ResCur()
-  if line("'\"") <= line("$")
+  if line("'\"") > 0 && line("'\"") <= line("$")
     normal! g`"
     return 1
   endif
@@ -92,7 +92,7 @@ augroup END
 "Remap default easymotion leader from \\ to \
 let g:EasyMotion_leader_key = '<Leader>'
 
-"Cause screen to scroll when within three lines of the edge
+"Cause screen to scroll when within five lines of the edge
 set scrolloff=5
 
 "Enable persistent undo
@@ -159,3 +159,7 @@ map <C-J> :bnext<CR>
 map <C-K> :bprev<CR>
 map <C-L> :tabn<CR>
 map <C-H> :tabp<CR>
+
+"Make the built-in file browser more useful
+let g:netrw_liststyle = 3 " View files as a tree
+let g:netrw_banner = 0 " Don't show the banner
