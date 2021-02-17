@@ -63,11 +63,12 @@ set t_Co=256
 "Disable bold font
 set t_md=
 
-"Map capital W and Q to lowercase in command mode
+"Map accidental capitals to their intended commands
 command WQ wq
 command Wq wq
 command W w
 command Q q
+command Tabnew tabnew
 
 "Tell vim to remember certain things when we exit
 " '10  marks will be remembered for up to 10 previously edited files
