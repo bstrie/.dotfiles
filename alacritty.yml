@@ -111,7 +111,7 @@ font:
     #   - (macOS) Menlo
     #   - (Linux/BSD) monospace
     #   - (Windows) Consolas
-    family: PragmataPro #monospace
+    family: "PragmataPro Mono" #monospace
 
     # The `style` can be specified to pick a specific face.
     #style: Regular
@@ -251,23 +251,23 @@ colors:
   # Normal colors
   normal:
     black:   '#1d2021' #'#1d1f21'
-    red:     '#d15547' #'#cc6666'
-    green:   '#afaf00' #'#b5bd68'
-    yellow:  '#ffaf00' #'#f0c674'
+    red:     '#d24c3d' #'#cc6666'
+    green:   '#9daf00' #'#b5bd68'
+    yellow:  '#ffc004' #'#f0c674'
     blue:    '#83a5a5' #'#81a2be'
-    magenta: '#d3869b' #'#b294bb'
-    cyan:    '#85ad85' #'#8abeb7'
+    magenta: '#d980a5' #'#b294bb'
+    cyan:    '#84b37f' #'#8abeb7'
     white:   '#d5c4a1' #'#c5c8c6'
 
   # Bright colors
   bright:
-    black:   '#665c54' #'#666666'
-    red:     '#fb4934' #'#d54e53'
+    black:   '#504945' #'#666666'
+    red:     '#d76154' #'#d54e53'
     green:   '#b8bb26' #'#b9ca4a'
-    yellow:  '#fabd2f' #'#e7c547'
+    yellow:  '#ffd24d' #'#e7c547'
     blue:    '#94b8b8' #'#7aa6da'
-    magenta: '#da95b8' #'#c397d8'
-    cyan:    '#8ec07c' #'#70c0b1'
+    magenta: '#e19ab7' #'#c397d8'
+    cyan:    '#9dc299' #'#70c0b1'
     white:   '#fbf1c7' #'#eaeaea'
 
   # Dim colors
