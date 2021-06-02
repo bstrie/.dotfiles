@@ -1,5 +1,4 @@
 #!/usr/bin/env bash
-printf "\nsource ~/.dotfiles/.benrc" >> ~/.bashrc
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ln -s ~/.dotfiles/.vim ~/.vim
 ln -s ~/.dotfiles/.vimrc ~/.vimrc

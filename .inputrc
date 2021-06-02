@@ -1,3 +1,0 @@
-# Partial bash history search using PageUp and PageDown
-"\e[5~": history-search-backward
-"\e[6~": history-search-forward
