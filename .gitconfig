@@ -1,5 +1,19 @@
+[user]
+email = 865233+bstrie@users.noreply.github.com
+name = bstrie
+
+[core]
+pager = delta
+
 [alias]
-lol = log --graph --decorate --pretty=oneline --abbrev-commit
-lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+last = log -1 HEAD
+
+[pull]
+ff = only
+
 [github]
 user = bstrie
+
+[delta]
+navigate = true
+plus-style = syntax "#003800"

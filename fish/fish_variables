@@ -1,0 +1,33 @@
+# This file contains fish universal variable definitions.
+# VERSION: 3.0
+SETUVAR __fish_initialized:3100
+SETUVAR fish_color_autosuggestion:brblack
+SETUVAR fish_color_cancel:red
+SETUVAR fish_color_command:brwhite
+SETUVAR fish_color_comment:brblack
+SETUVAR fish_color_cwd:normal
+SETUVAR fish_color_cwd_root:red
+SETUVAR fish_color_end:white
+SETUVAR fish_color_error:brmagenta
+SETUVAR fish_color_escape:brgreen
+SETUVAR fish_color_host:normal
+SETUVAR fish_color_host_remote:normal
+SETUVAR fish_color_keyword:brwhite
+SETUVAR fish_color_normal:normal
+SETUVAR fish_color_operator:brgreen
+SETUVAR fish_color_param:brblue
+SETUVAR fish_color_quote:brblue
+SETUVAR fish_color_redirection:brwhite
+SETUVAR fish_color_search_match:\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_selection:white\x1e\x2d\x2dbold\x1e\x2d\x2dbackground\x3dbrblack
+SETUVAR fish_color_user:normal
+SETUVAR fish_color_valid_path:\x2d\x2dunderline
+SETUVAR fish_key_bindings:fish_default_key_bindings
+SETUVAR fish_pager_color_completion:white
+SETUVAR fish_pager_color_description:cyan
+SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dunderline
+SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
+SETUVAR fish_pager_color_selected_completion:brwhite
+SETUVAR fish_pager_color_selected_description:brcyan
+SETUVAR fish_pager_color_selected_prefix:brwhite\x1e\x2d\x2dunderline
+SETUVAR fish_user_paths:/Users/bapple/\x2ecargo/bin\x1e/usr/local/bin
